@@ -54,7 +54,7 @@ def test_photos():
     image = cv2.imread(test_photo.name)
     face, rect = detect_face(image)
     label, confidence = face_recognizer.predict(face)
-    if ((label == me) and (confidence <= 20)):
+    if ((label == me) and (confidence <= 15)):
         text = "it's me"
     else:
         text = "it's not me"
